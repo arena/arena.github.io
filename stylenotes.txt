@@ -1,0 +1,82 @@
+
+
+/* top bar on main page: */
+background: #262626;
+height: 14px;
+
+/* Arena Reed ...maybe this is H1 */
+font-family: Lato-Heavy;
+font-size: 34px;
+color: #000000;
+line-height: 41px;
+
+/* gray background behind product, design, collaborative... */
+background: #EFEFEF;
+
+/* I am a Product and U */
+font-family: Lato-Light;
+font-size: 18px;
+color: #000000;
+line-height: 22px;
+
+/* Product Definition */
+font-family: Lato-Medium;
+font-size: 24px;
+color: #000000;
+line-height: 29px;
+
+/* Portfolio ..same as style above */
+font-family: Lato-Medium;
+font-size: 24px;
+color: #000000;
+line-height: 29px;
+
+/* I work with teams to: */
+font-family: Lato-Regular;
+font-size: 14px;
+color: #000000;
+line-height: 21px;
+
+/* I have experience co ...same as above */
+font-family: Lato-Regular;
+font-size: 14px;
+color: #000000;
+line-height: 21px;
+
+/* circle for project link: */
+background: #F15A29;
+height width = 100
+
+
+/* ------------- City 72 Project Page ------------- */
+
+/* City 72 ..same as Arena Reed on main pg*/
+font-family: Lato-Heavy;
+font-size: 34px;
+color: #000000;
+line-height: 41px;
+
+/* An Open-Source Toolk ...same as subtitle on main page */
+font-family: Lato-Regular;
+font-size: 18px;
+color: #000000;
+line-height: 22px;
+
+/* The Product ...section titles */
+font-family: Lato-Bold;
+font-size: 16px;
+color: #000000;
+line-height: 21px;
+
+/* Talk about what the ...paragraph text */
+font-family: Lato-Regular;
+font-size: 14px;
+color: #000000;
+line-height: 21px;
+
+
+/* global stuff */
+
+max-width: 960px;
+
+
