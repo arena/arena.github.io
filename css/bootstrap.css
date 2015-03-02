@@ -1089,12 +1089,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+  color: #FA743E;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color: #FA743E;
   text-decoration: underline;
 }
 a:focus {
@@ -1288,13 +1288,14 @@ font-family: "Lato",Helvetica Neue, Helvetica, Arial, _sans;
 font-size: 18px;
 color: #000000;
 line-height: 22px;
-margin-bottom: 14px;
+margin-bottom: 40px;
   
 }
 @media (min-width: 768px) {
   .lead {
     font-size: 18px;
   }
+  
 }
 small,
 .small {
@@ -1575,8 +1576,7 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-   width: 750px; 
-   /* width: 670px; */
+    width: 750px;
   }
 }
 @media (min-width: 992px) {
@@ -1587,7 +1587,6 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     width: 960px;
-    /* width: 670px; */
   }
 }
 .container-fluid {
@@ -1766,6 +1765,9 @@ pre code {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
+  
+  .col-sm-20 {width: 20%; float: left;}
+  
   .col-sm-12 {
     width: 100%;
   }
@@ -6508,6 +6510,7 @@ button.close {
   .hidden-xs {
     display: none !important;
   }
+  .col-sm-20 {width: 100%;}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .hidden-sm {
