@@ -15,6 +15,9 @@ dist-ssr
 # Local agent instructions
 CLAUDE.md
 
+# Design working files
+design-source/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
