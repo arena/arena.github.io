@@ -1,0 +1,218 @@
+/* KnitLog support pages: a teal "notebook cover" hero with a card of text below.
+   Art goes in .art (Arena supplies it); .todo marks copy still to write. */
+:root {
+  --page: #d3e6ea;        /* light teal around the card */
+  --cover: #2f8396;       /* hero, like a notebook cover */
+  --band: #4fa3b8;        /* the elastic band down the cover */
+  --card: #ffffff;
+  --ink: #201e1d;
+  --muted: rgb(32 30 29 / 0.62);
+  --divider: rgb(32 30 29 / 0.14);
+  --link: #1d6576;
+  --heart: #ee6a60;
+  --todo-bg: #eef5f6;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page: #12292e;
+    --cover: #1f5f6d;
+    --band: #2f7f92;
+    --card: #1e2224;
+    --ink: #f3f2f2;
+    --muted: rgb(243 242 242 / 0.62);
+    --divider: rgb(243 242 242 / 0.16);
+    --link: #8fd0de;
+    --todo-bg: #263034;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Hero ---- */
+.cover {
+  position: relative;
+  overflow: hidden;
+  background: var(--cover);
+  color: #fff;
+  text-align: center;
+  padding: 3.5rem 1rem 6.5rem;
+}
+
+/* Elastic band, like the notebook in the sketch. */
+.cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: max(1.25rem, 8%);
+  width: clamp(14px, 2.2vw, 26px);
+  background: var(--band);
+  box-shadow: -1px 0 0 rgb(0 0 0 / 0.08);
+}
+
+.cover a { color: inherit; text-decoration: none; }
+
+.wordmark {
+  margin: 0;
+  font-family: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+  font-size: clamp(2.5rem, 8vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.cover .subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+/* The support page's subtitle is the app's one-line description. */
+.cover .tagline {
+  max-width: 40rem;
+  margin: 1.5rem auto 0;
+  font-size: clamp(1.15rem, 3.4vw, 1.4rem);
+  line-height: 1.4;
+  opacity: 0.95;
+  text-wrap: balance;
+}
+
+/* A small drawn icon set inline with text, sized like an emoji. */
+.inline-icon {
+  height: 1.1em;
+  width: auto;
+  vertical-align: -0.2em;
+}
+
+/* The cover graphic. .art-slot is an empty placeholder box. */
+.art {
+  display: block;
+  width: clamp(120px, 30vw, 180px);
+  height: auto;
+  margin: 1.5rem auto 0;
+}
+
+/* The app icon, with iOS-style rounded corners. */
+.app-icon {
+  border-radius: 22.5%;
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.2);
+}
+
+.art-slot {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 2px dashed rgb(255 255 255 / 0.55);
+  border-radius: 16px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* ---- Card ---- */
+main {
+  position: relative;
+  max-width: 42rem;
+  margin: -4.5rem auto 3rem;
+  padding: 2.25rem 2.5rem 2rem;
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 12px 32px rgb(0 0 0 / 0.08);
+}
+
+@media (max-width: 720px) {
+  main {
+    margin: -4.5rem 1rem 2rem;
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+}
+
+h2 { font-size: 1.25rem; line-height: 1.3; margin: 2rem 0 0.5rem; }
+h2:first-child { margin-top: 0; }
+h3 { font-size: 1.02rem; margin: 1.25rem 0 0.25rem; }
+p, ul { margin: 0 0 1rem; }
+
+a { color: var(--link); text-underline-offset: 2px; }
+
+.updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+main nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--divider);
+  font-size: 0.95rem;
+}
+
+/* Longer reading (Design Choices, the privacy policy), set smaller than the rest of the card. */
+.design-notes p,
+.policy p,
+.policy li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Privacy policy summary table; each row links to its section below. */
+html { scroll-behavior: smooth; }
+h2[id] { scroll-margin-top: 1.5rem; }
+
+.tldr {
+  margin-bottom: 2.5rem;
+}
+
+.tldr table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.tldr th,
+.tldr td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6rem 0;
+  border-top: 1px solid var(--divider);
+}
+
+.tldr tr:last-child th,
+.tldr tr:last-child td {
+  border-bottom: 1px solid var(--divider);
+}
+
+.tldr th {
+  width: 38%;
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+.tldr th a { text-decoration: none; }
+.tldr th a:hover { text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .tldr th, .tldr td,
+  .tldr tr:last-child th, .tldr tr:last-child td { display: block; width: auto; border: 0; padding: 0; }
+  .tldr tr { display: block; padding: 0.6rem 0; border-top: 1px solid var(--divider); }
+  .tldr tr:last-child { border-bottom: 1px solid var(--divider); }
+  .tldr td { color: var(--muted); }
+}
+
+/* Placeholder copy, to be replaced before publishing. */
+.todo {
+  background: var(--todo-bg);
+  border-left: 3px solid var(--heart);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  color: var(--muted);
+  font-style: italic;
+}
