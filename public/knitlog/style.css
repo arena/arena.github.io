@@ -1,5 +1,15 @@
 /* KnitLog support pages: a teal "notebook cover" hero with a card of text below.
    Art goes in .art (Arena supplies it); .todo marks copy still to write. */
+/* Wordmark font: Baloo 2 (SIL Open Font License, see fonts/OFL-Baloo2.txt).
+   Self-hosted so visitors' browsers never contact Google. */
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url("/knitlog/fonts/baloo2-latin.woff2") format("woff2");
+}
+
 :root {
   --page: #d3e6ea;        /* light teal around the card */
   --cover: #2f8396;       /* hero, like a notebook cover */
@@ -64,10 +74,10 @@ body {
 
 .wordmark {
   margin: 0;
-  font-family: ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
-  font-size: clamp(2.5rem, 8vw, 3.75rem);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-family: "Baloo 2", ui-rounded, "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+  font-size: clamp(2.75rem, 9vw, 4.25rem);
+  font-weight: 700;
+  letter-spacing: 0;
   line-height: 1.1;
 }
 
