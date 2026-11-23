@@ -94,6 +94,34 @@ body {
   vertical-align: -0.2em;
 }
 
+/* Release status under the tagline: plain text pill now; the official
+   App Store badge replaces it at launch. */
+.availability {
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.pill {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1.5px solid rgb(255 255 255 / 0.6);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+a.pill-solid {
+  background: #fff;
+  border-color: #fff;
+  color: var(--cover);
+}
+
+a.pill-solid:hover { background: rgb(255 255 255 / 0.88); }
+
 /* The cover graphic. .art-slot is an empty placeholder box. */
 .art {
   display: block;
