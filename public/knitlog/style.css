@@ -102,6 +102,11 @@ body {
   margin: 1.5rem auto 0;
 }
 
+/* The cover icon links back to the support page. */
+.art-link { display: block; width: fit-content; margin: 0 auto; }
+.art-link .art { transition: transform 0.15s ease; }
+.art-link:hover .art { transform: scale(1.04); }
+
 /* The app icon, with iOS-style rounded corners. */
 .app-icon {
   border-radius: 22.5%;
