@@ -198,6 +198,15 @@ main nav {
   font-size: 0.95rem;
 }
 
+/* Page title at the top of the card (privacy policy). */
+.page-title {
+  margin: 0 0 0.25rem;
+  font-size: clamp(1.75rem, 4.5vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
 /* Longer reading (Design Choices, the privacy policy), set smaller than the rest of the card. */
 .design-notes p,
 .policy p,
